@@ -1,16 +1,15 @@
 
+import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Navlinks from "./Navlinks";
+
+import CurrentDate from "./CurrentDate";
 
 const Navbar = () => {
-    const date=new Date().toLocaleDateString("bn-BD",{
-        dateStyle:"full"
-    })
   return (
     <header className="w-full bg-[#f8f9fa] border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-     
+        {/* Logo and Date */}
         <div className="flex items-center gap-3">
           <div className="bg-[#0f8a42] p-2.5 rounded-2xl flex items-center justify-center shadow-sm">
             <Image
@@ -22,32 +21,33 @@ const Navbar = () => {
             />
           </div>
           <div className="flex flex-col">
-            <h1 className="text-3xl font-bold text-gray-700 leading-snug ">
+            <h1 className="text-3xl font-bold text-gray-700 leading-snug">
               বাজার দর
             </h1>
-            <span className="text-xs text-gray-950 font-bold">
-             {date}
-            </span>
+            <CurrentDate />
           </div>
         </div>
 
-        {/* Right Auth Section */}
+        {/* Auth Links */}
         <div className="flex items-center gap-6">
-<Link
-href="/signin"
-className="text-gray-900 font-semibold text-sm hover:text-[#0f8a42] transition-colors">
-সাইন ইন
-</Link>
-                <Link
-                    href="/signup"
-                    className="bg-[#0f8a42] hover:bg-[#0c7236] text-white px-6 py-2.5 rounded-xl font-semibold text-sm shadow-md shadow-green-700/20 transition-all active:scale-95"
-                >
-                 সাইন আপ
-                </Link>
+          <Link
+            href="/signin"
+            className="text-gray-900 font-semibold text-sm hover:text-[#0f8a42] transition-colors"
+          >
+            সাইন ইন
+          </Link>
+          <Link
+            href="/signup"
+            className="bg-[#0f8a42] hover:bg-[#0c7236] text-white px-6 py-2.5 rounded-xl font-semibold text-sm shadow-md shadow-green-700/20 transition-all active:scale-95"
+          >
+            সাইন আপ
+          </Link>
         </div>
-
       </div>
-      <Navlinks/>
+
+      <Suspense fallback={<div className="h-10 bg-gray-50/50" />}>
+       
+      </Suspense>
     </header>
   );
 };
