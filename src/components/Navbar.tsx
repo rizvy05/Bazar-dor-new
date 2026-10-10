@@ -1,8 +1,7 @@
 
-// import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
-// import ProductLink from "./ProductLink";
+
 
 export default async function Navbar() {
   "use cache";
@@ -17,7 +16,7 @@ export default async function Navbar() {
   return (
     <header className="w-full bg-[#f8f9fa] border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-        {/* Logo and Date */}
+       
         <div className="flex items-center gap-3">
           <Link href="/" className="flex items-center gap-3">
             <div className="bg-[#0f8a42] p-2.5 rounded-2xl flex items-center justify-center shadow-sm">
@@ -38,7 +37,7 @@ export default async function Navbar() {
           </Link>
         </div>
 
-        {/* Auth Links */}
+     
         <div className="flex items-center gap-6">
           <Link
             href="/signin"
@@ -55,10 +54,6 @@ export default async function Navbar() {
         </div>
       </div>
 
-      {/* Category Nav Links Bar */}
-      {/* <Suspense fallback={<div className="h-10 bg-gray-50/50 animate-pulse" />}>
-        <ProductLink />
-      </Suspense> */}
     </header>
   );
 }

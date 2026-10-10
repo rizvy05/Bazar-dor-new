@@ -3,7 +3,6 @@ import { Noto_Serif_Bengali} from "next/font/google";
 import "./globals.css";
 import ProductLink from "@/components/ProductLink";
 import Navbar from "@/components/Navbar";
-// import CurrentDate from "@/components/CurrentDate";
 import Footer from "@/components/Footer";
 const notoSerifBengali = Noto_Serif_Bengali({
   subsets: ["latin","bengali"],

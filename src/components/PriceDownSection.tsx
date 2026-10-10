@@ -17,7 +17,7 @@ export default async function PriceDownSection() {
   const products = await getProducts();
   const priceDecreased = products
     .filter((p) => p.change?.dir === "down")
-    .slice(0, 6); // Limits the array to the first 6 items
+    .slice(0, 6); 
 
   if (priceDecreased.length === 0) return null;
 
