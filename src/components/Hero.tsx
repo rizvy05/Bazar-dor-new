@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import CurrentDate from "./CurrentDate";
-
 const Hero = () => {
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-6">
@@ -9,8 +8,12 @@ const Hero = () => {
      
         <div className="flex-1 space-y-4">
        
-          <div className="inline-block bg-[#e2eee4] text-[#0f8a42] text-xs font-semibold px-3 py-1.5 rounded-full">
-            <CurrentDate />
+          <div className="inline-block bg-[#c7e6cc] text-[#000000] text-xs font-semibold px-3 py-1.5 rounded-full">
+         
+         
+         <CurrentDate/>
+
+
           </div>
 
         

@@ -18,11 +18,10 @@ export default async function PriceUpSection() {
   const priceIncreased = products
     .filter((p) => p.change?.dir === "up")
     .slice(0, 6);
-
   if (priceIncreased.length === 0) return null;
 
   return (
-    <section className="mb-8">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-6">
       <div className="flex items-center gap-2 mb-4">
         <span className="text-red-600 text-xs">▲</span>
         <h2 className="text-xl font-bold text-gray-900">আজ দাম বেড়েছে</h2>

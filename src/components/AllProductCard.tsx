@@ -17,12 +17,30 @@ export default async function AllProductCard() {
 
   return (
   
-    <section className="mb-8">
-      <div className="flex items-center gap-2 mb-4">
-        {/* <span className="text-emerald-600 text-xs">▼</span> */}
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-6">
+      {/* <div className="flex items-center gap-2 mb-4">
+      
           <h2 className="text-3xl font-bold text-gray-900">সব পণ্য</h2>
+          <br/>
         <p className="text-xl font-bold text-gray-900">মোট ৩৩টি পণ্য দেখানো হচ্ছে</p>
-      </div>
+      </div> */}
+
+     
+      
+          <h2 className="text-3xl font-bold text-gray-900">সব পণ্য</h2>
+         <br/>
+        <p className="text-xl font-bold text-gray-800">মোট ৩৩টি পণ্য দেখানো হচ্ছে</p>
+   
+
+
+
+
+
+
+
+
+
+
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {products.map((product, idx) => (

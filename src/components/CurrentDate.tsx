@@ -1,37 +1,3 @@
-// "use client";
-// import { useEffect, useState } from "react";
-
-// export default function CurrentDate() {
-//   const [dateStr, setDateStr] = useState<string>("");
-
-//   useEffect(() => {
-//     setDateStr(
-//       new Date().toLocaleDateString("bn-BD", {
-//         dateStyle: "full",
-//       })
-//     );
-//   }, []);
-
-//   return <span className="text-xs text-gray-950 font-bold">{dateStr}</span>;
-// }
-
-// import { connection } from "next/server";
-
-// export default async function CurrentDate() {
-//   // Opts this component into request-time dynamic server rendering
-//   await connection();
-
-//   const dateStr = new Date().toLocaleDateString("bn-BD", {
-//     weekday: "long",
-//     day: "numeric",
-//     month: "long",
-//     year: "numeric",
-//   });
-
-//   return <span>{dateStr}</span>;
-// }
-
-
 export default async function CurrentDate() {
   "use cache";
 
@@ -42,5 +8,9 @@ export default async function CurrentDate() {
     year: "numeric",
   });
 
-  return <span>{dateStr}</span>;
+  return (
+    <span className="text-xs text-gray-500 font-medium">
+      {dateStr}
+    </span>
+  );
 }

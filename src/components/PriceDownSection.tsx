@@ -22,7 +22,7 @@ export default async function PriceDownSection() {
   if (priceDecreased.length === 0) return null;
 
   return (
-    <section className="mb-8">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-6">
       <div className="flex items-center gap-2 mb-4">
         <span className="text-emerald-600 text-xs">▼</span>
         <h2 className="text-xl font-bold text-gray-900">আজ দাম কমেছে</h2>
