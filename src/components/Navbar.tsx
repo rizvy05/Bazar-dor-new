@@ -1,6 +1,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import UserInfo from "./UserInfo";
 
 
 export default async function Navbar() {
@@ -37,21 +38,9 @@ export default async function Navbar() {
           </Link>
         </div>
 
-     
-        <div className="flex items-center gap-6">
-          <Link
-            href="/signin"
-            className="text-gray-900 font-semibold text-sm hover:text-[#0f8a42] transition-colors"
-          >
-            সাইন ইন
-          </Link>
-          <Link
-            href="/signup"
-            className="bg-[#0f8a42] hover:bg-[#0c7236] text-white px-6 py-2.5 rounded-xl font-semibold text-sm shadow-md shadow-green-700/20 transition-all active:scale-95"
-          >
-            সাইন আপ
-          </Link>
-        </div>
+    <UserInfo/>
+
+
       </div>
 
     </header>

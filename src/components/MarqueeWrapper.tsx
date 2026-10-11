@@ -30,7 +30,7 @@ return null;
 }
 
 return (
-<MarqueeText direction="right" duration={10}>
+<MarqueeText direction="right" duration={25}>
   {safeItems.map((item, index) => {
     const key = item?.id ?? item?._id ?? index;
     const productId = item?.slug || item?.id || item?._id;
