@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
-import { Noto_Serif_Bengali} from "next/font/google";
+// import { Noto_Serif_Bengali} from "next/font/google";
 import "./globals.css";
 import ProductLink from "@/components/ProductLink";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-const notoSerifBengali = Noto_Serif_Bengali({
-  subsets: ["latin","bengali"],
-});
+import { Toaster } from "react-hot-toast";
+
+
+// const notoSerifBengali = Noto_Serif_Bengali({
+//   subsets: ["latin","bengali"],
+// });
 
 
 export const metadata: Metadata = {
@@ -16,11 +19,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
+    // <html
+    //   lang="en"
+    //   data-theme='light'
+    //   className={`${notoSerifBengali.className} h-full antialiased`}
+    // >
     <html
-      lang="en"
-      data-theme='light'
-      className={`${notoSerifBengali.className} h-full antialiased`}
-    >
+  lang="bn"
+  data-theme="light"
+  className="h-full antialiased"
+>
       <body className="min-h-full flex flex-col">
         
         <Navbar/>
@@ -30,7 +38,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {children}
         
        <Footer/>
-        
+        <Toaster/>
         </body>
     </html>
   );

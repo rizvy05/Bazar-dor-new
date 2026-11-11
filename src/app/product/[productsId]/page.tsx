@@ -1,4 +1,4 @@
-
+import NotFound from "@/app/not-found";
 import Link from "next/link";
 interface Market {
   market: string;
@@ -48,7 +48,9 @@ export default async function ProductDetailPage({
   const product = allProducts.find(
     (p) => String(p.slug) === String(productsId) || String(p.id) === String(productsId)
   );
-
+if(!allProducts){
+  NotFound()
+}
   if (!product) {
     return (
       <div className="min-h-screen bg-[#f5f7f5] flex items-center justify-center">
